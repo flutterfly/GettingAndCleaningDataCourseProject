@@ -22,8 +22,8 @@ The script performs the following tasks:
 
 To run the script:
 - Put the run_analysis.R file in your working directory
-- On the command line, enter ```{r}source("run_analysis.R")``` and hit enter
-- On the command line, enter ```{r}run_analyis.R```
+- On the command line, enter ```source("run_analysis.R")``` and hit enter
+- On the command line, enter ```run_analyis.R```
 
 The script will output two files in your working directory:
 

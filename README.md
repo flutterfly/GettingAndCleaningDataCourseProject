@@ -1,5 +1,3 @@
-GettingAndCleaningDataCourseProject
-===================================
 Run_analysis ReadMe file
 ========================================================
 
@@ -14,4 +12,22 @@ When running this script, you will need to have the following files in your work
         7. features.txt
         8. activity_labels.txt
         
-The script will output a file in your working directory called "all_data.txt". 
+The script performs the following tasks:
+
+- combines the test and train data into one dataset, 
+- subsets the data to only keep variables relating to mean and standard deviation (meanFreq variables are deleted)
+- converts the activity numeric ids into their descriptive names (eg standing, sitting, etc),
+- creates labels for the variables from the features.txt file, and makes the names R-friendly
+- creates a tidy data set with the average of each variable for each activity and each subject
+
+To run the script:
+- Put the run_analysis.R file in your working directory
+- On the command line, enter ```{r}source("run_analysis.R")``` and hit enter
+- On the command line, enter ```{r}run_analyis.R```
+
+The script will output two files in your working directory:
+
+1. "all_data.txt" - the dataset created after implementing steps 1 through 4 of the course project instructions.
+2. "tidy_data.txt" - the dataset created after implementing step 5 of the course project instructions.
+
+

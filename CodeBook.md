@@ -1,34 +1,43 @@
 CodeBook
 ========================================================
 
-**Variables**
+The script in run_analysis.R takes Samsung phone data and transforms it to a tidy dataset, as described below.
+
+**Variables and Features**
 ________________________________________________________
-The following features are included in the dataset created by ```run_analysis()```. 
+The following description is paraphrased from the features_info.txt file in the source data as referenced in the section Source Data, below. 
 
-tBodyAcc-XYZ  
-tGravityAcc-XYZ  
-tBodyAccJerk-XYZ  
-tBodyGyro-XYZ  
-tBodyGyroJerk-XYZ  
-tBodyAccMag  
-tGravityAccMag  
-tBodyAccJerkMag  
-tBodyGyroMag  
-tBodyGyroJerkMag  
-fBodyAcc-XYZ  
-fBodyAccJerk-XYZ  
-fBodyGyro-XYZ  
-fBodyAccMag  
-fBodyAccJerkMag  
-fBodyGyroMag  
-fBodyGyroJerkMag  
+>The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-The set of variables that are included for each of these features are:
+>Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+>Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+>These signals were used to estimate variables of the feature vector for each pattern:  
+>'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
+
+>tBodyAcc-XYZ  
+>tGravityAcc-XYZ  
+>tBodyAccJerk-XYZ  
+>tBodyGyro-XYZ  
+>tBodyGyroJerk-XYZ  
+>tBodyAccMag  
+>tGravityAccMag  
+>tBodyAccJerkMag  
+>tBodyGyroMag  
+>tBodyGyroJerkMag  
+>fBodyAcc-XYZ  
+>fBodyAccJerk-XYZ  
+>fBodyGyro-XYZ  
+>fBodyAccMag  
+>fBodyAccJerkMag  
+>fBodyGyroMag  
+>fBodyGyroJerkMag  
+
+The set of variables that are summarized by ```run_analysis()``` for each of these features are:
 
 mean(): Mean value  
 std(): Standard deviation  
-
-For a description of how the original variables were collected and a technical description of the variables, see the source file features_info.txt (see below on where to download the source data).  
 
 The tidy dataset created from ```run_analysis()``` presents the above variables for 30 subjects, across 6 activities for each subject (ie 180 rows of data).
 
